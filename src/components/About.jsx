@@ -1,160 +1,247 @@
-// import React from 'react';
-// import { FiArrowRight, FiArrowDownRight } from 'react-icons/fi';
-// import { SiNextdotjs, SiReact, SiTailwindcss, SiMongodb, SiNodedotjs, SiExpress } from 'react-icons/si';
+"use client";
 
-// const AboutSection = () => {
-//   const stack = [
-//     { name: 'Next.js', icon: <SiNextdotjs />, color: 'hover:text-white' },
-//     { name: 'React', icon: <SiReact />, color: 'hover:text-[#61DAFB]' },
-//     { name: 'Tailwind', icon: <SiTailwindcss />, color: 'hover:text-[#38BDF8]' },
-//     { name: 'MongoDB', icon: <SiMongodb />, color: 'hover:text-[#47A248]' },
-//     { name: 'Node.js', icon: <SiNodedotjs />, color: 'hover:text-[#339933]' },
-//     { name: 'Express', icon: <SiExpress />, color: 'hover:text-gray-400' },
-//   ];
+import { motion } from "framer-motion";
 
-//   return (
-//     <section className="py-32 bg-[#050505] text-[#e5e7eb] font-sans">
-//       <div className="container mx-auto px-6 max-w-6xl">
-        
-//         {/* Top Header - Ultra Clean */}
-//         <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6">
-//           <div>
-//             <p className="text-blue-500 font-mono text-sm mb-2 tracking-[0.2em] uppercase">About me</p>
-//             <h2 className="text-4xl md:text-6xl font-medium tracking-tight text-white">
-//               Designing with logic, <br />
-//               <span className="text-gray-600">coding with purpose.</span>
-//             </h2>
-//           </div>
-//           <div className="hidden md:block">
-//             <FiArrowDownRight size={48} className="text-gray-800" />
-//           </div>
-//         </div>
+import {
+  FiUser,
+  FiCode,
+  FiLayers,
+  FiDatabase,
+} from "react-icons/fi";
 
-//         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-          
-//           {/* Left Column - Large Narrative Text */}
-//           <div className="lg:col-span-7">
-//             <div className="space-y-8">
-//               <p className="text-xl md:text-2xl leading-relaxed font-light">
-//                 I'm <span className="text-white font-normal underline decoration-blue-500/30 underline-offset-8">Md. Rashidul Islam</span>, 
-//                 a frontend specialist and a student at Square Polytechnic Institute. 
-//                 I bridge the gap between complex backend structures and smooth, high-end interfaces.
-//               </p>
-//               <p className="text-gray-400 text-lg leading-relaxed">
-//                 I focus on building applications that don't just work—they feel right. 
-//                 Whether it's managing data in a <span className="text-white italic">Job Application Tracker</span> 
-//                 or crafting a digital <span className="text-white italic">BookShelf</span>, 
-//                 I prioritize clean code and "premium" aesthetics.
-//               </p>
-              
-//               {/* Skill Marquee / List */}
-//               <div className="pt-8 border-t border-white/5">
-//                 <p className="text-xs uppercase tracking-widest text-gray-500 mb-6 font-bold">My Tech Stack</p>
-//                 <div className="flex flex-wrap gap-8 text-3xl text-gray-700">
-//                   {stack.map((tech) => (
-//                     <div key={tech.name} className={`${tech.color} transition-all duration-300 flex items-center gap-2 group cursor-default`}>
-//                       {tech.icon}
-//                       <span className="text-[10px] uppercase font-bold opacity-0 group-hover:opacity-100 transition-opacity tracking-tighter text-white">
-//                         {tech.name}
-//                       </span>
-//                     </div>
-//                   ))}
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-
-//           {/* Right Column - Scannable Info */}
-//           <div className="lg:col-span-5">
-//             <div className="sticky top-24 space-y-12">
-              
-//               {/* Info Block 1 */}
-//               <div>
-//                 <h4 className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-4 font-bold flex items-center gap-2">
-//                   <div className="w-8 h-[1px] bg-blue-500"></div> Based in
-//                 </h4>
-//                 <p className="text-lg font-medium text-white">Sirajganj, Rajshahi, Bangladesh</p>
-//               </div>
-
-//               {/* Info Block 2 */}
-//               <div>
-//                 <h4 className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-4 font-bold flex items-center gap-2">
-//                   <div className="w-8 h-[1px] bg-blue-500"></div> Education
-//                 </h4>
-//                 <p className="text-lg font-medium text-white">Square Polytechnic Institute</p>
-//                 <p className="text-sm text-gray-500 mt-1">Computer Science & Engineering</p>
-//               </div>
-
-//               {/* Info Block 3 */}
-//               <div>
-//                 <h4 className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-4 font-bold flex items-center gap-2">
-//                   <div className="w-8 h-[1px] bg-blue-500"></div> Passion
-//                 </h4>
-//                 <p className="text-gray-400 italic leading-relaxed">
-//                   "Lifelong learner, trying to adapt to the tech world."
-//                 </p>
-//               </div>
-
-//               <button className="group flex items-center gap-3 text-white font-bold text-sm uppercase tracking-widest border-b border-blue-500 pb-2 hover:gap-5 transition-all">
-//                 Download Resume <FiArrowRight className="text-blue-500" />
-//               </button>
-
-//             </div>
-//           </div>
-
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default AboutSection;
-
-
-
-
-
-
-
-
-import { FiMapPin, FiBookOpen } from 'react-icons/fi';
+import {
+  SiReact,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiMongodb,
+} from "react-icons/si";
 
 export default function About() {
   return (
-    <section className="py-24 border-t border-white/5">
-      <div className="container mx-auto px-6 max-w-6xl">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-          <div className="lg:col-span-7">
-            <h2 className="text-3xl font-medium text-white mb-8">Engineering with purpose.</h2>
-            <p className="text-gray-400 text-lg leading-relaxed mb-6">
-              I am a frontend developer and computer science student at <strong>Square Polytechnic Institute</strong>. 
-              My approach focuses on creating "Invisible UX"—interfaces so intuitive they feel natural to the user.
-            </p>
-            <div className="grid grid-cols-2 gap-8 pt-8 border-t border-white/5">
-              <div>
-                <h4 className="text-xs uppercase text-blue-500 font-bold mb-4">Frontend</h4>
-                <p className="text-sm text-gray-500">React, Next.js, Tailwind, HeroUI, DaisyUI</p>
+    <section
+      id="about"
+      className="relative py-28 overflow-hidden bg-gradient-to-b from-[#020617] via-[#07111f] to-[#020617]"
+    >
+
+      {/* Background Glow */}
+      <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-cyan-500/10 blur-[120px] rounded-full" />
+
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-blue-500/10 blur-[120px] rounded-full" />
+
+      {/* Container */}
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="text-center mb-20"
+        >
+
+          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-cyan-400/20 bg-cyan-500/5 backdrop-blur-xl mb-6">
+
+            <FiUser className="text-cyan-400" />
+
+            <span className="text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+              About Me
+            </span>
+          </div>
+
+          <h2 className="text-4xl md:text-6xl font-black text-white">
+            Know More{" "}
+
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
+              About Me
+            </span>
+          </h2>
+
+          <p className="max-w-3xl mx-auto mt-8 text-gray-400 text-lg leading-9">
+            I am a passionate Frontend Developer focused on building
+            responsive, modern and user-friendly web applications using
+            React, Next.js and modern frontend technologies.
+          </p>
+        </motion.div>
+
+        {/* Main Content */}
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+          {/* Left Side */}
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="space-y-8"
+          >
+
+            {/* About Card */}
+            <div className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-2xl p-8 shadow-2xl">
+
+              <h3 className="text-2xl font-bold text-white mb-5">
+                Who am I?
+              </h3>
+
+              <p className="text-gray-400 leading-8 text-lg">
+                Assalamu Alaikum! I'm{" "}
+
+                <span className="text-cyan-400 font-semibold">
+                  Md. Rashidul Islam
+                </span>,
+                a passionate Frontend Developer from Bangladesh. I love
+                creating modern, responsive and visually appealing web
+                applications with clean UI/UX.
+              </p>
+
+              <p className="text-gray-400 leading-8 text-lg mt-5">
+                I enjoy learning new technologies and improving my skills
+                every day. Currently I work with technologies like
+                React.js, Next.js, Tailwind CSS, Node.js, Express.js
+                and MongoDB.
+              </p>
+            </div>
+
+            {/* Info Cards */}
+            <div className="grid sm:grid-cols-2 gap-6">
+
+              {/* Card */}
+              <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 hover:scale-105 transition-all duration-300">
+
+                <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-2xl mb-5">
+                  <FiCode />
+                </div>
+
+                <h3 className="text-white font-bold text-xl mb-2">
+                  Frontend
+                </h3>
+
+                <p className="text-gray-400 leading-7">
+                  Building responsive and modern UI with React and Next.js.
+                </p>
               </div>
-              <div>
-                <h4 className="text-xs uppercase text-purple-500 font-bold mb-4">Backend</h4>
-                <p className="text-sm text-gray-500">Node.js, Express, MongoDB, Firebase</p>
+
+              {/* Card */}
+              <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 hover:scale-105 transition-all duration-300">
+
+                <div className="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-400 text-2xl mb-5">
+                  <FiDatabase />
+                </div>
+
+                <h3 className="text-white font-bold text-xl mb-2">
+                  Backend
+                </h3>
+
+                <p className="text-gray-400 leading-7">
+                  Creating APIs and database systems using Node.js and MongoDB.
+                </p>
               </div>
             </div>
-          </div>
-          
-          <div className="lg:col-span-5 space-y-8">
-            <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
-              <div className="flex items-center gap-4 mb-4">
-                <FiMapPin className="text-blue-500" />
-                <span className="text-sm text-gray-300">Sirajganj, Bangladesh</span>
+          </motion.div>
+
+          {/* Right Side */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+
+            {/* Main Card */}
+            <div className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-2xl p-8 shadow-2xl relative overflow-hidden">
+
+              {/* Glow */}
+              <div className="absolute top-0 right-0 w-[200px] h-[200px] bg-cyan-500/10 blur-[100px]" />
+
+              <h3 className="text-3xl font-black text-white mb-10">
+                My Skills
+              </h3>
+
+              {/* Skills */}
+              <div className="space-y-6">
+
+                {/* Skill */}
+                <div>
+                  <div className="flex justify-between mb-2">
+                    <span className="text-white font-medium">
+                      React.js
+                    </span>
+
+                    <span className="text-cyan-400">
+                      90%
+                    </span>
+                  </div>
+
+                  <div className="w-full h-3 rounded-full bg-white/10 overflow-hidden">
+                    <div className="w-[90%] h-full bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"></div>
+                  </div>
+                </div>
+
+                {/* Skill */}
+                <div>
+                  <div className="flex justify-between mb-2">
+                    <span className="text-white font-medium">
+                      Next.js
+                    </span>
+
+                    <span className="text-cyan-400">
+                      85%
+                    </span>
+                  </div>
+
+                  <div className="w-full h-3 rounded-full bg-white/10 overflow-hidden">
+                    <div className="w-[85%] h-full bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"></div>
+                  </div>
+                </div>
+
+                {/* Skill */}
+                <div>
+                  <div className="flex justify-between mb-2">
+                    <span className="text-white font-medium">
+                      Tailwind CSS
+                    </span>
+
+                    <span className="text-cyan-400">
+                      92%
+                    </span>
+                  </div>
+
+                  <div className="w-full h-3 rounded-full bg-white/10 overflow-hidden">
+                    <div className="w-[92%] h-full bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"></div>
+                  </div>
+                </div>
+
+                {/* Skill */}
+                <div>
+                  <div className="flex justify-between mb-2">
+                    <span className="text-white font-medium">
+                      MongoDB
+                    </span>
+
+                    <span className="text-cyan-400">
+                      75%
+                    </span>
+                  </div>
+
+                  <div className="w-full h-3 rounded-full bg-white/10 overflow-hidden">
+                    <div className="w-[75%] h-full bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"></div>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-center gap-4">
-                <FiBookOpen className="text-purple-500" />
-                <span className="text-sm text-gray-300">Square Polytechnic Institute</span>
+
+              {/* Tech Icons */}
+              <div className="flex items-center justify-center gap-8 mt-14 text-5xl text-gray-600">
+
+                <SiReact className="hover:text-cyan-400 hover:scale-110 transition-all duration-300 cursor-pointer" />
+
+                <SiNextdotjs className="hover:text-white hover:scale-110 transition-all duration-300 cursor-pointer" />
+
+                <SiTailwindcss className="hover:text-sky-400 hover:scale-110 transition-all duration-300 cursor-pointer" />
+
+                <SiMongodb className="hover:text-green-500 hover:scale-110 transition-all duration-300 cursor-pointer" />
               </div>
             </div>
-            <p className="text-gray-500 italic text-sm">"Lifelong learner, trying to adapt to the tech world."</p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
