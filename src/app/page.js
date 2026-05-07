@@ -1,9 +1,24 @@
+import About from "@/components/About"
+import Contact from "@/components/Contact"
+import Timeline from "@/components/Edu_Exp"
+import Footer from "@/components/Footer"
+import Hero from "@/components/Hero"
+import Projects from "@/components/Projects"
+import Skills from "@/components/Skills"
 
 
 
 function HomePage() {
   return (
-    <div className="h-screen">HomePage</div>
+    <div className="h-screen">
+      <Hero />
+      <About />
+      <Projects/>
+      <Skills />
+      <Timeline />
+      <Contact />
+      <Footer />
+    </div>
   )
 }
 
