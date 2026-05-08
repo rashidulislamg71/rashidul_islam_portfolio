@@ -94,80 +94,14 @@ import Image from "next/image";
 import { FaFacebookSquare, FaHiking, FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
 import { IoLogoYoutube } from "react-icons/io";
+import PulseBadge from "./PulseBadge";
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden bg-[#020617] flex  items-center">
-
-      {/* Glow Effects */}
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/20 blur-[120px] rounded-full" />
-
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-cyan-500/20 blur-[120px] rounded-full" />
-
-      {/* SVG Background */}
-      <div className="absolute inset-0 -z-10 overflow-hidden opacity-40">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          version="1.1"
-          xmlnsXlink="http://www.w3.org/1999/xlink"
-          width="1440"
-          height="900"
-          preserveAspectRatio="none"
-          viewBox="0 0 1440 900"
-          className="w-full h-full object-cover"
-        >
-          <g mask='url("#SvgjsMask1027")' fill="none">
-            <rect
-              width="1440"
-              height="900"
-              x="0"
-              y="0"
-              fill='url("#SvgjsLinearGradient1028")'
-            ></rect>
-
-            <path
-              d="M395.16384446423933 181.2056065356423L447.1342268230976 310.1905968209469 523.6353306623528 215.71960121805796z"
-              fill="rgba(28, 83, 142, 0.4)"
-              className="triangle-float1"
-            ></path>
-
-            <path
-              d="M251.516,351.038C303.865,348.469,341.995,305.86,365.954,259.245C387.623,217.084,387.94,169.036,366.887,126.564C342.849,78.07,305.588,30.773,251.516,28.375C194.301,25.837,144.851,65.467,116.941,115.477C89.772,164.159,88.163,223.112,115.818,271.519C143.692,320.309,195.393,353.792,251.516,351.038"
-              fill="rgba(28, 83, 142, 0.4)"
-              className="triangle-float2"
-            ></path>
-
-            <path
-              d="M869.9019349216724 59.413979164261214L872.4381954030162 213.11025920142168 988.8086384346154 145.9237525914117z"
-              fill="rgba(28, 83, 142, 0.4)"
-              className="triangle-float3"
-            ></path>
-          </g>
-
-          <defs>
-            <mask id="SvgjsMask1027">
-              <rect width="1440" height="900" fill="#ffffff"></rect>
-            </mask>
-
-            <linearGradient
-              x1="15.28%"
-              y1="-39.29%"
-              x2="84.72%"
-              y2="139.29%"
-              gradientUnits="userSpaceOnUse"
-              id="SvgjsLinearGradient1028"
-            >
-              <stop stopColor="#0e2a47" offset="0"></stop>
-
-              <stop stopColor="rgba(6, 3, 68, 1)" offset="1"></stop>
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
-
       {/* Main Content */}
       <div className="pt-30 pb-20  md:pt-40  max-w-7xl mx-auto px-6 w-full relative z-10">
-        <div className="flex justify-around gap-20 items-center">
+        <div className="flex flex-wrap justify-around gap-20 items-center">
 
           {/* Left Content */}
           <motion.div
@@ -177,7 +111,7 @@ export default function Hero() {
           >
             {/* Available Badge */}
             <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl mb-8">
-              <div className="w-3 h-3 rounded-full bg-green-400 animate-pulse"></div>
+              <PulseBadge />
 
               <span className="text-xs tracking-[0.3em] uppercase text-blue-400 font-semibold">
                 Available for Hire
@@ -299,7 +233,7 @@ export default function Hero() {
         </div>
       </div >
 
-    
+
     </section >
   );
 }

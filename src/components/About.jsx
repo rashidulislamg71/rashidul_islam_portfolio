@@ -1,249 +1,269 @@
-"use client";
+// import React from 'react';
+// import { FiArrowRight, FiMapPin, FiTerminal, FiDatabase } from 'react-icons/fi';
 
-import { motion } from "framer-motion";
+// const AboutSection = () => {
+//   return (
+//     <section id="about" className="py-32 bg-[#050505] text-white overflow-hidden">
+//       <div className="container mx-auto px-6 max-w-7xl">
 
+//         {/* Subtle Section Label */}
+//         <div className="flex items-center gap-4 mb-20">
+//           <span className="text-blue-500 font-mono text-xs uppercase tracking-[0.5em]">01 / Profile</span>
+//           <div className="h-[1px] w-20 bg-blue-500/30"></div>
+//         </div>
+
+//         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+
+//           {/* LEFT COLUMN: The Bold Statement */}
+//           <div className="lg:col-span-7">
+//             <h2 className="text-4xl md:text-6xl font-medium leading-[1.1] tracking-tighter mb-10">
+//               Turning complex logic into <br />
+//               <span className="text-gray-500">elegant digital motion.</span>
+//             </h2>
+
+//             <div className="space-y-8 max-w-2xl text-gray-400 text-lg md:text-xl leading-relaxed">
+//               <p>
+//                 I am <span className="text-white">Md. Rashidul Islam</span>, a Frontend Developer currently 
+//                 refining my craft at Square Polytechnic Institute. I specialize in the 
+//                 <span className="text-white"> Next.js ecosystem</span>, focusing on performance, 
+//                 scalability, and "invisible" UX.
+//               </p>
+//               <p>
+//                 My philosophy is simple: <span className="italic">Code should be as clean as the UI it powers.</span> 
+//                 Whether I'm architecting a library system or a job tracker, I treat every 
+//                 component as a piece of digital art.
+//               </p>
+//             </div>
+
+//             {/* Micro-Bento Skills Grid */}
+//             <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-4">
+//               <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-blue-500/20 transition-colors group">
+//                 <FiTerminal className="text-blue-500 mb-4 text-xl" />
+//                 <h4 className="text-white font-bold mb-2">Frontend Core</h4>
+//                 <p className="text-sm text-gray-500">Next.js, React 19, TailwindCSS, HeroUI.</p>
+//               </div>
+//               <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-purple-500/20 transition-colors group">
+//                 <FiDatabase className="text-purple-500 mb-4 text-xl" />
+//                 <h4 className="text-white font-bold mb-2">Backend & Data</h4>
+//                 <p className="text-sm text-gray-500">Node.js, MongoDB Atlas, Better Auth, Firebase.</p>
+//               </div>
+//             </div>
+//           </div>
+
+//           {/* RIGHT COLUMN: The Details Card */}
+//           <div className="lg:col-span-5 sticky top-32">
+//             <div className="relative p-1 rounded-[2.5rem] bg-gradient-to-br from-white/10 via-transparent to-transparent">
+//               <div className="bg-[#0a0a0a] rounded-[2.4rem] p-10 space-y-12">
+
+//                 {/* Location & Education */}
+//                 <div className="space-y-8">
+//                   <div className="flex items-start gap-5">
+//                     <div className="mt-1 p-2 rounded-lg bg-blue-500/10 text-blue-500">
+//                       <FiMapPin />
+//                     </div>
+//                     <div>
+//                       <p className="text-[10px] uppercase tracking-widest text-gray-600 mb-1">Base</p>
+//                       <p className="text-gray-200 font-medium">Sirajganj, Bangladesh</p>
+//                     </div>
+//                   </div>
+
+//                   <div className="flex items-start gap-5">
+//                     <div className="mt-1 p-2 rounded-lg bg-purple-500/10 text-purple-500">
+//                       <FiArrowRight />
+//                     </div>
+//                     <div>
+//                       <p className="text-[10px] uppercase tracking-widest text-gray-600 mb-1">Education</p>
+//                       <p className="text-gray-200 font-medium leading-tight">
+//                         Computer Science & Engineering <br />
+//                         <span className="text-sm text-gray-500">Square Polytechnic Institute</span>
+//                       </p>
+//                     </div>
+//                   </div>
+//                 </div>
+
+//                 {/* Personal Mission Statement */}
+//                 <div className="pt-8 border-t border-white/5">
+//                   <blockquote className="text-gray-400 italic font-light leading-relaxed">
+//                     "Lifelong learner, constantly adapting to the ever-evolving 
+//                     landscape of the tech world."
+//                   </blockquote>
+//                 </div>
+
+//                 {/* Status Indicator */}
+//                 <div className="flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 w-fit">
+//                   <span className="relative flex h-2 w-2">
+//                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+//                     <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+//                   </span>
+//                   <span className="text-[10px] uppercase tracking-widest text-gray-400 font-bold">
+//                     Open to Opportunities
+//                   </span>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default AboutSection;
+
+
+
+
+import React from "react";
 import {
-  FiUser,
-  FiCode,
-  FiLayers,
+  FiArrowRight,
+  FiMapPin,
+  FiTerminal,
   FiDatabase,
 } from "react-icons/fi";
+import SectionLabel from "./SectionLabel";
+import PulseBadge from "./PulseBadge";
 
-import {
-  SiReact,
-  SiNextdotjs,
-  SiTailwindcss,
-  SiMongodb,
-} from "react-icons/si";
-
-export default function About() {
+const AboutSection = () => {
   return (
     <section
       id="about"
-      className="relative py-28 overflow-hidden bg-gradient-to-b from-[#020617] via-[#07111f] to-[#020617]"
+      className="relative py-10 text-white overflow-hidden
+       bg-[#020617]  "
     >
 
-      {/* Background Glow */}
-      <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-cyan-500/10 blur-[120px] rounded-full" />
+      <div className="container mx-auto px-6 max-w-7xl">
+        {/* Section Label */}
+        <SectionLabel> 01 / About Me</SectionLabel>
 
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-blue-500/10 blur-[120px] rounded-full" />
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
 
-      {/* Container */}
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+          {/* LEFT */}
+          <div className="lg:col-span-7">
 
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-          className="text-center mb-20"
-        >
+            <h2 className="text-4xl md:text-5xl font-medium leading-[1.1] tracking-tighter mb-10">
+              I build modern web experiences <br />
+              <span className="text-gray-500">
+                with clean UI and scalable code.
+              </span>
+            </h2>
 
-          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-cyan-400/20 bg-cyan-500/5 backdrop-blur-xl mb-6">
+            {/* NEW ABOUT TEXT */}
+            <div className="space-y-8 max-w-2xl text-gray-400 text-lg md:text-xl leading-relaxed">
 
-            <FiUser className="text-cyan-400" />
+              <p>
+                I am <span className="text-white font-semibold">Md. Rashidul Islam</span>, a
+                passionate Frontend Developer from Bangladesh focused on building
+                fast, clean, SEO friendly, responsive, and user-friendly web applications.
+              </p>
 
-            <span className="text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
-              About Me
-            </span>
+              <p>
+                I specialize in the <span className="text-white">Next.js ecosystem</span> and enjoy
+                turning complex ideas into simple and elegant digital products.
+                I care deeply about performance, UI detail, and clean architecture.
+              </p>
+
+              <p>
+                Currently, I’m learning and building full-stack applications using
+                <span className="text-white"> React, Next.js, Node.js, and MongoDB</span>,
+                constantly improving my skills through real-world projects.
+              </p>
+            </div>
+
+            {/* Skills */}
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4">
+
+              <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/20 transition-colors">
+                <FiTerminal className="text-cyan-400 mb-4 text-xl" />
+                <h4 className="text-white font-bold mb-2">Frontend</h4>
+                <p className="text-sm text-gray-500">
+                  React, Next.js, Tailwind CSS, DaisyUI, HeroUI and Modern Tools
+                </p>
+              </div>
+
+              <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-purple-500/20 transition-colors">
+                <FiDatabase className="text-purple-500 mb-4 text-xl" />
+                <h4 className="text-white font-bold mb-2">Backend</h4>
+                <p className="text-sm text-gray-500">
+                  Node.js, Express, MongoDB, BetterAuth, Firebase
+                </p>
+              </div>
+            </div>
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-black text-white">
-            Know More{" "}
+          {/* RIGHT */}
+          <div className="lg:col-span-5 sticky top-32">
 
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
-              About Me
-            </span>
-          </h2>
+            <div className="relative p-1 rounded-[2.5rem] bg-linear-to-br from-cyan-500/20 via-transparent to-transparent">
 
-          <p className="max-w-3xl mx-auto mt-8 text-gray-400 text-lg leading-9">
-            I am a passionate Frontend Developer focused on building
-            responsive, modern and user-friendly web applications using
-            React, Next.js and modern frontend technologies.
-          </p>
-        </motion.div>
+              <div className="bg-[#0a0a0a] rounded-[2.4rem] p-10 space-y-10">
 
-        {/* Main Content */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+                {/* Location */}
+                <div className="flex items-start gap-5">
 
-          {/* Left Side */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="space-y-8"
-          >
+                  <div className="mt-1 p-2 rounded-lg bg-cyan-500/10 text-cyan-400">
+                    <FiMapPin />
+                  </div>
 
-            {/* About Card */}
-            <div className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-2xl p-8 shadow-2xl">
-
-              <h3 className="text-2xl font-bold text-white mb-5">
-                Who am I?
-              </h3>
-
-              <p className="text-gray-400 leading-8 text-lg">
-                Assalamu Alaikum! I'm{" "}
-
-                <span className="text-cyan-400 font-semibold">
-                  Md. Rashidul Islam
-                </span>,
-                a passionate Frontend Developer from Bangladesh. I love
-                creating modern, responsive and visually appealing web
-                applications with clean UI/UX.
-              </p>
-
-              <p className="text-gray-400 leading-8 text-lg mt-5">
-                I enjoy learning new technologies and improving my skills
-                every day. Currently I work with technologies like
-                React.js, Next.js, Tailwind CSS, Node.js, Express.js
-                and MongoDB.
-              </p>
-            </div>
-
-            {/* Info Cards */}
-            <div className="grid sm:grid-cols-2 gap-6">
-
-              {/* Card */}
-              <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 hover:scale-105 transition-all duration-300">
-
-                <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-2xl mb-5">
-                  <FiCode />
+                  <div>
+                    <p className="text-[12px] uppercase tracking-widest text-gray-600 mb-1">
+                      Location
+                    </p>
+                    <p className="text-gray-200 font-medium">
+                      Sirajganj, Bangladesh
+                    </p>
+                  </div>
                 </div>
 
-                <h3 className="text-white font-bold text-xl mb-2">
-                  Frontend
-                </h3>
+                {/* Education */}
+                <div className="flex items-start gap-5">
 
-                <p className="text-gray-400 leading-7">
-                  Building responsive and modern UI with React and Next.js.
-                </p>
-              </div>
+                  <div className="mt-1 p-2 rounded-lg bg-blue-500/10
+                   text-purple-500">
+                    <FiArrowRight />
+                  </div>
 
-              {/* Card */}
-              <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 hover:scale-105 transition-all duration-300">
+                  <div>
+                    <p className="text-[12px] uppercase tracking-widest
+                     text-gray-600 mb-0.5">
+                      Education
+                    </p>
 
-                <div className="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-400 text-2xl mb-5">
-                  <FiDatabase />
+                    <p className="text-gray-200 font-medium leading-tight">
+                      Computer Science & Engineering <br />
+                      <span className="text-sm text-gray-500">
+                        Diploma Student
+                      </span>
+                    </p>
+                  </div>
                 </div>
 
-                <h3 className="text-white font-bold text-xl mb-2">
-                  Backend
-                </h3>
+                {/* Quote */}
+                <div className="pt-6 border-t border-white/5">
+                  <blockquote className="text-gray-400 italic font-light leading-relaxed">
+                    “I believe in writing clean code, building meaningful products,
+                    and continuously improving every day.”
+                  </blockquote>
+                </div>
 
-                <p className="text-gray-400 leading-7">
-                  Creating APIs and database systems using Node.js and MongoDB.
-                </p>
+                {/* Status */}
+                <div className="flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 w-fit">
+
+                  <PulseBadge />
+
+                  <span className="text-[12px] uppercase tracking-widest text-gray-400 font-bold">
+                    Open to Opportunities
+                  </span>
+                </div>
+
               </div>
             </div>
-          </motion.div>
 
-          {/* Right Side */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-
-            {/* Main Card */}
-            <div className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-2xl p-8 shadow-2xl relative overflow-hidden">
-
-              {/* Glow */}
-              <div className="absolute top-0 right-0 w-[200px] h-[200px] bg-cyan-500/10 blur-[100px]" />
-
-              <h3 className="text-3xl font-black text-white mb-10">
-                My Skills
-              </h3>
-
-              {/* Skills */}
-              <div className="space-y-6">
-
-                {/* Skill */}
-                <div>
-                  <div className="flex justify-between mb-2">
-                    <span className="text-white font-medium">
-                      React.js
-                    </span>
-
-                    <span className="text-cyan-400">
-                      90%
-                    </span>
-                  </div>
-
-                  <div className="w-full h-3 rounded-full bg-white/10 overflow-hidden">
-                    <div className="w-[90%] h-full bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"></div>
-                  </div>
-                </div>
-
-                {/* Skill */}
-                <div>
-                  <div className="flex justify-between mb-2">
-                    <span className="text-white font-medium">
-                      Next.js
-                    </span>
-
-                    <span className="text-cyan-400">
-                      85%
-                    </span>
-                  </div>
-
-                  <div className="w-full h-3 rounded-full bg-white/10 overflow-hidden">
-                    <div className="w-[85%] h-full bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"></div>
-                  </div>
-                </div>
-
-                {/* Skill */}
-                <div>
-                  <div className="flex justify-between mb-2">
-                    <span className="text-white font-medium">
-                      Tailwind CSS
-                    </span>
-
-                    <span className="text-cyan-400">
-                      92%
-                    </span>
-                  </div>
-
-                  <div className="w-full h-3 rounded-full bg-white/10 overflow-hidden">
-                    <div className="w-[92%] h-full bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"></div>
-                  </div>
-                </div>
-
-                {/* Skill */}
-                <div>
-                  <div className="flex justify-between mb-2">
-                    <span className="text-white font-medium">
-                      MongoDB
-                    </span>
-
-                    <span className="text-cyan-400">
-                      75%
-                    </span>
-                  </div>
-
-                  <div className="w-full h-3 rounded-full bg-white/10 overflow-hidden">
-                    <div className="w-[75%] h-full bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"></div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Tech Icons */}
-              <div className="flex items-center justify-center gap-8 mt-14 text-5xl text-gray-600">
-
-                <SiReact className="hover:text-cyan-400 hover:scale-110 transition-all duration-300 cursor-pointer" />
-
-                <SiNextdotjs className="hover:text-white hover:scale-110 transition-all duration-300 cursor-pointer" />
-
-                <SiTailwindcss className="hover:text-sky-400 hover:scale-110 transition-all duration-300 cursor-pointer" />
-
-                <SiMongodb className="hover:text-green-500 hover:scale-110 transition-all duration-300 cursor-pointer" />
-              </div>
-            </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default AboutSection;
