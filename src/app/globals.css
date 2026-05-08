@@ -1,4 +1,4 @@
-/* app/globals.css */
+/* app/globals.css
 @import "tailwindcss";
 @import "@heroui/styles";
 @plugin "daisyui";
@@ -23,4 +23,34 @@ body {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+} */
+
+
+/* app/globals.css */
+@import "tailwindcss";
+@import "@heroui/styles";
+@plugin "daisyui";
+
+html {
+  scroll-behavior: smooth;
+  /* Optional: Prevents layout shifts on scroll */
+  scrollbar-gutter: stable;
+}
+
+/* Optional: Custom scrollbar to match your dark theme */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f1f1f;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6; /* Blue accent */
 }

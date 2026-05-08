@@ -3,7 +3,6 @@ import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "@/components/Footer";
 import { Providers } from "./provider/nextThemeProvider";
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -38,8 +37,10 @@ export default function RootLayout({ children }) {
 
     <html lang="en" className="scroll-smooth">
       <body className="bg-[#050505] text-[#e5e7eb] antialiased">
-        <Navbar />
-        {children}
+ 
+          <Navbar />
+          {children}
+ 
       </body>
     </html>
   );

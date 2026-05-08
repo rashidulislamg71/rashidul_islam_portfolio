@@ -13,8 +13,8 @@ function HomePage() {
     <div className="h-screen">
       <Hero />
       <About />
-      <Projects/>
       <Skills />
+      <Projects/>
       <Timeline />
       <Contact />
       <Footer />

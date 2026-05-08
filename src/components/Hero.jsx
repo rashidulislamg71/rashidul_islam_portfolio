@@ -101,6 +101,9 @@ export default function Hero() {
     <section className="relative min-h-screen overflow-hidden bg-[#020617] flex  items-center">
       {/* Main Content */}
       <div className="pt-30 pb-20  md:pt-40  max-w-7xl mx-auto px-6 w-full relative z-10">
+        {/* Grid overlay */}
+        <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:40px_40px]" />
+
         <div className="flex flex-wrap justify-around gap-20 items-center">
 
           {/* Left Content */}
