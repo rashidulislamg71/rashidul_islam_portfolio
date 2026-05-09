@@ -72,8 +72,7 @@ const SkillsSection = () => {
 
 
       {/* Grid overlay */}
-      <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:40px_40px]" />
-
+    
       <div className="container mx-auto px-6 max-w-6xl relative z-10">
 
         {/* Header */}

@@ -37,7 +37,6 @@ const AboutSection = () => {
       className="relative py-20 md:px-16 text-white overflow-hidden bg-[#020617]"
     >
       {/* Grid background */}
-      <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:40px_40px]" />
 
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
 
@@ -182,10 +181,10 @@ const AboutSection = () => {
               </div>
             </div>
           </motion.div>
-
         </div>
       </div>
     </section>
+
   );
 };
 
