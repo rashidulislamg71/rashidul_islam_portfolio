@@ -9,7 +9,7 @@ import Skills from "@/components/Skills";
 
 function HomePage() {
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen relative bg-[#020617] px-5 mx-auto max-w-7xl">
       <Hero />
       <About />
       <Skills />

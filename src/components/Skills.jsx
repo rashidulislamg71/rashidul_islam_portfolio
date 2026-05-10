@@ -67,14 +67,9 @@ const SkillsSection = () => {
   return (
     <section
       id="skills"
-      className="relative py-32 text-white overflow-hidden bg-[#020617]"
+      className="relative py-20 text-white overflow-hidden"
     >
-
-
-      {/* Grid overlay */}
-    
-      <div className="container mx-auto px-6 max-w-6xl relative z-10">
-
+      <div className="container relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 60 }}

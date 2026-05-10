@@ -2,29 +2,29 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { FiGithub, FiLinkedin, FiMail, FiArrowUpRight, FiPhone } from "react-icons/fi";
+import { FiGithub, FiMail, FiArrowUpRight, FiPhone } from "react-icons/fi";
+import { FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
   const year = new Date().getFullYear();
 
   const links = [
-    { name: "GitHub", icon: <FiGithub />, url: "#" },
-    { name: "LinkedIn", icon: <FiLinkedin />, url: "#" },
-    { name: "Email", icon: <FiMail />, url: "#" },
+    { name: "GitHub", icon: <FiGithub />, url: "https://github.com/rashidulislamg71/" },
+    { name: "LinkedIn", icon: <FaLinkedinIn />, url: "https://www.linkedin.com/in/rashidul-islam71/" },
+    // { name: "Email", icon: <FiMail />, url: "mailto:jrashidulislam0103@gmail.com", },
 
-    // WhatsApp (NEW)
+    // WhatsApp
     {
       name: "WhatsApp",
       icon: <FiPhone />,
-      url: "https://wa.me/8801849267669",
+      url: "https://wa.me/8801849267660",
     },
   ];
 
   return (
-    <footer className="relative bg-[#020617] text-white overflow-hidden">
+    <footer className="relative py-20 text-white overflow-hidden">
 
-     
-      <div className="relative z-10 container mx-auto px-6 py-20 max-w-6xl">
+      <div className="relative z-10 container ">
 
         {/* Top */}
         <motion.div
@@ -53,6 +53,7 @@ const Footer = () => {
                 key={i}
                 href={item.url}
                 target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ y: -3 }}
                 className="flex items-center gap-2 px-4 py-2 rounded-full
                 bg-white/5 border border-white/10 text-gray-300

@@ -15,9 +15,9 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="relative py-20 md:py-32 md:px-16 bg-[#030712] overflow-hidden text-white"
+      className="relative py-20 overflow-hidden text-white"
     >
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
+      <div className="relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}

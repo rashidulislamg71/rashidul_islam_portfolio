@@ -29,16 +29,13 @@ const stagger = {
 };
 
 
-
 const AboutSection = () => {
   return (
     <section
       id="about"
-      className="relative py-20 md:px-16 text-white overflow-hidden bg-[#020617]"
+      className="relative py-20 text-white overflow-hidden bg-[#020617]"
     >
-      {/* Grid background */}
-
-      <div className="container mx-auto px-6 max-w-7xl relative z-10">
+      <div className="container relative z-10">
 
         {/* SECTION LABEL */}
         <motion.div

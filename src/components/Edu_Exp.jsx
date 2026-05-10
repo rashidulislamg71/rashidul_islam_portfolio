@@ -231,14 +231,9 @@ const HistorySection = () => {
   ];
 
   return (
-    <section className="relative py-32 bg-[#020617] text-white overflow-hidden">
+    <section className="relative py-20  text-white overflow-hidden">
 
-      {/* Background Glow (like your About section) */}
- 
-      {/* Grid texture */}
-     
-      <div className="container mx-auto px-6 max-w-6xl relative z-10">
-
+      <div className="container relative z-10">
         <SectionLabel> 04 / Education & Experience </SectionLabel>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
