@@ -9,6 +9,7 @@ const navLinks = [
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
+  { name: "Experience", href: "#experience" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -20,13 +21,13 @@ const Navbar = () => {
       let current = "home";
 
       navLinks.forEach((link) => {
-        const section = document.querySelector(link.href);
+        const section = document.getElementById(link.href.replace("#", ""));
 
         if (!section) return;
 
         const rect = section.getBoundingClientRect();
 
-        if (rect.top <= 200) {
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
           current = section.id;
         }
       });
@@ -35,7 +36,6 @@ const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-
     handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);

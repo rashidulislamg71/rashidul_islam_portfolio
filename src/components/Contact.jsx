@@ -9,6 +9,7 @@ import {
   FiPhone,
   FiSend,
 } from "react-icons/fi";
+import SectionLabel from "./SectionLabel";
 
 const ContactSection = () => {
 
@@ -25,9 +26,7 @@ const ContactSection = () => {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <p className="text-cyan-400 uppercase tracking-[0.35em] text-xs mb-4">
-            Contact
-          </p>
+         <SectionLabel> 05 / Contact </SectionLabel>
 
           <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-[0.95]">
             Let’s Build <br />

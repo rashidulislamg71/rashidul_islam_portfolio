@@ -135,13 +135,13 @@ const SkillsSection = () => {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           className="mt-16 p-8 rounded-3xl
-          bg-gradient-to-r from-cyan-500/5 via-transparent to-blue-500/5
+          bg-linear-to-r from-cyan-500/5 via-transparent to-blue-500/5
           border border-white/10 flex flex-col md:flex-row justify-between items-center gap-6"
         >
           <p className="text-gray-400 italic">
             Currently exploring:
             <span className="text-white">
-              {" "} System Design, Advanced Backend & Performance Optimization
+              {" "} Advanced Frontend, Backend Technology, Performance Optimization & Modern Web Architectures.
             </span>
           </p>
 

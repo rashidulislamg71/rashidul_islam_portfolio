@@ -6,11 +6,13 @@ import {
   FiMapPin,
   FiTerminal,
   FiDatabase,
+  FiDownload,
 } from "react-icons/fi";
 
 import SectionLabel from "./SectionLabel";
 import PulseBadge from "./PulseBadge";
 import { motion } from "framer-motion";
+import DownloadButton from "./DownloadButton";
 
 // Animation variants
 const fadeUp = {
@@ -33,7 +35,7 @@ const AboutSection = () => {
   return (
     <section
       id="about"
-      className="relative py-20 text-white overflow-hidden bg-[#020617]"
+      className="relative py-20 text-white overflow-hidden "
     >
       <div className="container relative z-10">
 
@@ -78,17 +80,22 @@ const AboutSection = () => {
                 passionate Frontend Developer from Bangladesh focused on building fast,
                 clean, SEO friendly, responsive applications.
               </p>
-
               <p>
-                I specialize in the <span className="text-white">Next.js ecosystem</span>,
-                turning complex ideas into simple and elegant digital products.
+                I specialize in <span className="text-white">React.js </span> and <span className="text-white">Next.js </span>, focusing on clean UI, smooth user experiences, and scalable frontend architecture. I enjoy turning ideas into elegant digital products with attention to performance and design details.
               </p>
-
               <p>
-                Currently building full-stack apps using
-                <span className="text-white"> React, Next.js, Node.js, MongoDB</span>.
+                Currently,  I am improving my frontend expertise while expanding my backend technologies and learning full-stack development with  <span className="text-white"> Node.js, Express.js, and MongoDB </span>. to build complete web applications from frontend to backend.
               </p>
             </motion.div>
+            <motion.div
+              variants={fadeUp}
+              className="mt-10"
+            >
+              <DownloadButton href="/resume.pdf">
+                Download Resume
+              </DownloadButton>
+            </motion.div>
+            
 
             {/* Skills Cards */}
             <motion.div
@@ -98,7 +105,7 @@ const AboutSection = () => {
               <motion.div
                 variants={stagger}
                 whileHover={{ scale: 1.03 }}
-                className="p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/20 transition"
+                className="p-6 rounded-xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/20 transition"
               >
                 <FiTerminal className="text-cyan-400 mb-4 text-xl" />
                 <h4 className="text-white font-bold mb-2">Frontend</h4>
@@ -110,7 +117,7 @@ const AboutSection = () => {
               <motion.div
                 variants={stagger}
                 whileHover={{ scale: 1.03 }}
-                className="p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-purple-500/20 transition"
+                className="p-6 rounded-xl bg-white/[0.02] border border-white/5 hover:border-purple-500/20 transition"
               >
                 <FiDatabase className="text-purple-500 mb-4 text-xl" />
                 <h4 className="text-white font-bold mb-2">Backend</h4>
@@ -121,6 +128,8 @@ const AboutSection = () => {
             </motion.div>
           </motion.div>
 
+
+
           {/* RIGHT SIDE */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -129,7 +138,7 @@ const AboutSection = () => {
             viewport={{ once: false, amount: 0.2 }}
             className="lg:col-span-5 sticky top-32"
           >
-            <div className="relative p-1 rounded-[2.5rem] bg-gradient-to-br from-cyan-500/20 via-transparent to-transparent">
+            <div className="relative p-1 rounded-[2.5rem] bg-linear-to-br from-cyan-500/20 via-transparent to-transparent">
 
               <div className="bg-[#0a0a0a] rounded-[2.4rem] p-10 space-y-10">
 

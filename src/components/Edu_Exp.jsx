@@ -231,10 +231,10 @@ const HistorySection = () => {
   ];
 
   return (
-    <section className="relative py-20  text-white overflow-hidden">
+    <section id="experience" className="relative py-20  text-white overflow-hidden">
 
       <div className="container relative z-10">
-        <SectionLabel> 04 / Education & Experience </SectionLabel>
+        <SectionLabel> 04 / Education & Experience </SectionLabel> 
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
 

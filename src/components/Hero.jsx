@@ -19,6 +19,7 @@ import { FaFacebookSquare, FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
 import { IoLogoYoutube } from "react-icons/io";
 import PulseBadge from "./PulseBadge";
+import DownloadButton from "./DownloadButton";
 
 export default function Hero() {
   return (
@@ -68,6 +69,7 @@ export default function Hero() {
 
             {/* Buttons */}
             <div className="flex flex-wrap gap-5 mt-10">
+              <DownloadButton>Download Resume</DownloadButton>
 
               {/* Gradient Button */}
               <a href="#projects" className="group relative inline-flex h-12 overflow-hidden rounded-full p-[1px] cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(6,182,212,0.5)] active:scale-95">
@@ -82,7 +84,7 @@ export default function Hero() {
               </a>
 
               {/* Github Button */}
-              <Link target="_blank" href={"https://github.com/rashidulislamg71/"}>
+              {/* <Link target="_blank" href={"https://github.com/rashidulislamg71/"}>
                 <button className="cursor-pointer group h-12 px-10 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 hover:border-cyan-400/40 hover:shadow-[0_0_20px_rgba(6,182,212,0.2)] transition-all duration-300 text-white flex items-center gap-2 backdrop-blur-xl hover:-translate-y-1 hover:scale-105 active:scale-95">
 
                   <FiGithub className="transition-transform duration-300 group-hover:rotate-12" />
@@ -90,34 +92,35 @@ export default function Hero() {
                   GitHub
                 </button>
 
-              </Link>
+              </Link> */}
             </div>
 
             {/* Social Icons */}
             <div className="flex items-center gap-5 mt-12 text-2xl text-gray-500">
-              {/* <a
-                href="#"
+              <Link target="_blank"
+                href="https://github.com/rashidulislamg71/"
                 className="hover:text-white hover:-translate-y-1 transition-all duration-300"
               >
                 <FiGithub />
-              </a> */}
+              </Link>
 
-              <Link
+              {/* <Link
                 href="#"
                 className="hover:text-red-500 hover:-translate-y-1 transition-all duration-300"
               >
                 <IoLogoYoutube />
-              </Link>
+              </Link> */}
 
               <Link
-                href="#"
+                target="_blank"
+                href="https://www.linkedin.com/in/rashidul-islam71"
                 className="hover:text-blue-400 hover:-translate-y-1 transition-all duration-300"
               >
                 <FaLinkedinIn />
               </Link>
 
               <Link target="_blank"
-                href="https://www.facebook.com/rashidulislam72/"
+                href="https://www.facebook.com/rashidulislam72"
                 className="hover:text-blue-500 hover:-translate-y-1 transition-all duration-300"
               >
                 <FaFacebookSquare />
