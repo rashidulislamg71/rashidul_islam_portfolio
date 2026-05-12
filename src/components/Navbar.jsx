@@ -97,15 +97,15 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal gap-2 px-1 flex gap-10 text-white font-medium">
+            <ul className="menu menu-horizontal gap-2 px-1 flex gap-8 text-white font-medium">
 
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className={`relative text-lg px-1 transition-all duration-200 ${activeSection === link.href.replace("#", "")
+                  className={`relative text-md px-1 transition-all duration-200 ${activeSection === link.href.replace("#", "")
                     ? "text-white"
-                    : "text-gray-300 hover:text-white"
+                    : "text-gray-400 hover:text-white"
                     }`}
                 >
                   {link.name}
