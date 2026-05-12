@@ -28,7 +28,7 @@ export default function Hero() {
     overflow-hidden ">
       {/* Main Content */}
       <div className=" relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-15 md:gap-20 ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-15 md:gap-20 ">
           {/* Left Content */}
           <div>
             {/* Available Badge */}
