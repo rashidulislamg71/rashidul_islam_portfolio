@@ -131,28 +131,18 @@ import { FiBookOpen, FiBriefcase, FiMapPin } from "react-icons/fi";
 import SectionLabel from "./SectionLabel";
 
 const TimelineItem = ({ item, index, type }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 60 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: false, amount: 0.3 }}
-    transition={{
-      duration: 0.6,
-      ease: "easeOut",
-      delay: index * 0.1,
-    }}
-    className="relative pl-10 pb-14 border-l border-white/10 last:pb-0"
-  >
+  <div className="relative ml-2 pl-8 pb-14 border-l border-white/40 group transition-all duration-500 " >
     {/* Glow Dot */}
-    <div className="absolute left-[-6px] top-2 w-3 h-3 rounded-full bg-cyan-400 shadow-[0_0_20px_rgba(34,211,238,0.8)]" />
+    <div className="absolute left-[-6px] top-2 w-3 h-3 rounded-full bg-cyan-400
+     shadow-[0_0_20px_rgba(34,211,238,0.8)] z-50" />
 
-    <motion.div
-      whileHover={{ scale: 1.02 }}
+    <div
       className="relative p-6 rounded-2xl 
       bg-white/5 backdrop-blur-xl border border-white/10
       hover:border-cyan-400/30 transition-all duration-300 overflow-hidden"
     >
       {/* Hover Glow */}
-      <div className="absolute inset-0 opacity-0 hover:opacity-100 bg-cyan-500/5 transition-all duration-300" />
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-linear-to-br from-cyan-500/20 via-transparent to-transparent transition-all duration-500 " />
 
       {/* Header */}
       <div className="flex justify-between items-center mb-4 relative z-10">
@@ -193,8 +183,8 @@ const TimelineItem = ({ item, index, type }) => (
           ))}
         </div>
       )}
-    </motion.div>
-  </motion.div>
+    </div>
+  </div>
 );
 
 const HistorySection = () => {
@@ -202,8 +192,8 @@ const HistorySection = () => {
     {
       degree: "Diploma in Computer Science & Engineering",
       institution: "Square Polytechnic Institute",
-      duration: "2022 — Present",
-      location: "Pabna, Bangladesh",
+      duration: "2023 — Present",
+      location: "Bogura, Bangladesh",
       description:
         "Focused on software engineering fundamentals, web development, and system design while building real-world projects.",
     },
@@ -217,7 +207,7 @@ const HistorySection = () => {
       location: "Remote",
       description:
         "Building modern web applications using Next.js ecosystem with focus on performance, UI/UX and scalable architecture.",
-      technologies: ["Next.js", "React", "Tailwind", "Framer Motion"],
+      technologies: ["Next.js", "React", "Tailwind",],
     },
     {
       role: "Web Development Learner",
@@ -234,7 +224,7 @@ const HistorySection = () => {
     <section id="experience" className="relative py-20  text-white overflow-hidden">
 
       <div className="container relative z-10">
-        <SectionLabel> 04 / Education & Experience </SectionLabel> 
+        <SectionLabel> 04 / Education & Experience </SectionLabel>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
 

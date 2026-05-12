@@ -15,21 +15,13 @@ import { VscVscode } from "react-icons/vsc";
 import { motion } from "framer-motion";
 import SectionLabel from "./SectionLabel";
 import PulseBadge from "./PulseBadge";
-
-// Animation
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: { staggerChildren: 0.12 }
-  }
-};
-
+import { FiDatabase, FiTerminal, FiTool } from "react-icons/fi";
 
 
 const SkillsSection = () => {
   const skills = [
     {
+      icon: <FiTerminal />,
       title: "Frontend",
       desc: "Modern UI & responsive design",
       items: [
@@ -41,6 +33,7 @@ const SkillsSection = () => {
       ],
     },
     {
+      icon: <FiDatabase />,
       title: "Backend",
       desc: "API & database handling",
       items: [
@@ -52,6 +45,7 @@ const SkillsSection = () => {
       ],
     },
     {
+      icon: <FiTool />,
       title: "Tools",
       desc: "Workflow & deployment",
       items: [
@@ -72,9 +66,6 @@ const SkillsSection = () => {
       <div className="container relative z-10">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.3 }}
           className="mb-16"
         >
           <SectionLabel>02 / Skills</SectionLabel>
@@ -90,26 +81,18 @@ const SkillsSection = () => {
 
         {/* Cards */}
         <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: false, amount: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 group "
         >
           {skills.map((cat, i) => (
             <motion.div
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.3 }}
               key={i}
-              whileHover={{ scale: 1.03 }}
-              className="relative p-8 rounded-3xl
+              className="group relative p-6 md:p-8 rounded-2xl 
               bg-white/5 border border-white/10 backdrop-blur-xl
               hover:border-cyan-400/30 transition-all duration-300"
             >
               {/* glow */}
               <div className="absolute inset-0 opacity-0 hover:opacity-100 bg-cyan-500/5 transition" />
-
+              <span className="text-cyan-300 mb-4 text-xl group-hover:translate-x-2 group-hover:text-white duration-500 transition-all ">{cat.icon}</span>
               <h3 className="text-xl font-bold mb-2">{cat.title}</h3>
               <p className="text-gray-400 text-sm mb-6">{cat.desc}</p>
 
@@ -132,16 +115,14 @@ const SkillsSection = () => {
 
         {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="mt-16 p-8 rounded-3xl
+          className="mt-16 p-5 md:p-8 rounded-2xl
           bg-linear-to-r from-cyan-500/5 via-transparent to-blue-500/5
           border border-white/10 flex flex-col md:flex-row justify-between items-center gap-6"
         >
           <p className="text-gray-400 italic">
             Currently exploring:
             <span className="text-white">
-              {" "} Advanced Frontend, Backend Technology, Performance Optimization & Modern Web Architectures.
+              {" "} Advanced Frontend, Backend, Performance Optimization & Modern Web Architectures.
             </span>
           </p>
 

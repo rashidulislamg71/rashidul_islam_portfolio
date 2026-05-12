@@ -24,19 +24,15 @@ import DownloadButton from "./DownloadButton";
 export default function Hero() {
   return (
 
-    <section id="home" className="md:pt-40 py-30 relative
+    <section id="home" className="md:pt-40 py-25 relative
     overflow-hidden ">
       {/* Main Content */}
       <div className=" relative z-10">
-        <div className="flex justify-between flex-wrap gap-20 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-15 md:gap-20 ">
           {/* Left Content */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
+          <div>
             {/* Available Badge */}
-            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl mb-8">
+            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl mb-5 md:mb-8">
               <PulseBadge />
 
               <span className="text-xs tracking-[0.3em] uppercase text-blue-400 font-semibold">
@@ -47,12 +43,12 @@ export default function Hero() {
             {/* Heading */}
             <p className="text-gray-400 text-lg md:text-xl
              leading-9 ">Assalamu Alikum. <br />
-              Hi...
+              Hi... 💖
             </p>
             <h1 className="text-3xl md:text-4xl font-black leading-tight text-white">
               <span>I'm </span>
               Md. Rashidul
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-cyan-300">
                 {" "}Islam
               </span>
             </h1>
@@ -60,7 +56,7 @@ export default function Hero() {
             {/* Sub Text */}
             <p className="mt-8 text-gray-400 text-lg md:text-xl
              leading-9 max-w-2xl">
-              Frontend Developer building modern, responsive and
+              <span className=" font-semibold text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-cyan-300 ">Frontend Developer</span> building modern, responsive and
               high-performance web applications with{" "}
               <span className="text-white font-medium">Next.js</span>,
               <span className="text-white font-medium"> React</span>,
@@ -139,26 +135,21 @@ export default function Hero() {
 
               <SiMongodb className="hover:text-green-500 transition-all duration-300 hover:scale-110" />
             </div>
-          </motion.div>
+          </div>
 
           {/* Right Side */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
-            className="relative flex items-center justify-center"
-          >
+          <div className="relative flex justify-center " >
 
             {/* Right Side Image */}
             <Image
-              width={300}
-              height={300}
+              width={350}
+              height={350}
               src="/rashidul_islam.png"
               alt="Rashidul Islam"
               className="animate-pulse h-[260px] w-[270px] rounded-2xl transition-all duration-500 hover:scale-105 border-[10px] border-blue-300/10"
             />
 
-          </motion.div>
+          </div>
         </div>
       </div >
 

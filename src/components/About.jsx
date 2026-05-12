@@ -40,44 +40,33 @@ const AboutSection = () => {
       <div className="container relative z-10">
 
         {/* SECTION LABEL */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.3 }}
-          transition={{ duration: 0.6 }}
-        >
+        <div>
           <SectionLabel>01 / About Me</SectionLabel>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
 
           {/* LEFT SIDE */}
-          <motion.div
-            variants={stagger}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.2 }}
+          <div
             className="lg:col-span-7"
           >
             {/* Heading */}
-            <motion.h2
-              variants={fadeUp}
+            <h2
               className="text-4xl md:text-5xl font-medium leading-[1.1] tracking-tighter mb-10"
             >
               I build modern web experiences <br />
               <span className="text-gray-500">
                 with clean UI and scalable code.
               </span>
-            </motion.h2>
+            </h2>
 
             {/* Text */}
-            <motion.div
-              variants={fadeUp}
-              className="space-y-8 max-w-2xl text-gray-400 text-lg md:text-xl leading-relaxed"
+            <div
+              className="space-y-8 max-w-2xl text-gray-400 text-base md:text-xl leading-relaxed"
             >
               <p>
                 I am <span className="text-white font-semibold">Md. Rashidul Islam</span>, a
-                passionate Frontend Developer from Bangladesh focused on building fast,
+                passionate <span className="text-white font-semibold">Frontend Developer</span> from Bangladesh focused on building fast,
                 clean, SEO friendly, responsive applications.
               </p>
               <p>
@@ -86,8 +75,8 @@ const AboutSection = () => {
               <p>
                 Currently,  I am improving my frontend expertise while expanding my backend technologies and learning full-stack development with  <span className="text-white"> Node.js, Express.js, and MongoDB </span>. to build complete web applications from frontend to backend.
               </p>
-            </motion.div>
-            <motion.div
+            </div>
+           <motion.div 
               variants={fadeUp}
               className="mt-10"
             >
@@ -95,38 +84,33 @@ const AboutSection = () => {
                 Download Resume
               </DownloadButton>
             </motion.div>
-            
+
 
             {/* Skills Cards */}
-            <motion.div
-              variants={stagger}
+            <div
               className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4"
             >
-              <motion.div
-                variants={stagger}
-                whileHover={{ scale: 1.03 }}
-                className="p-6 rounded-xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/20 transition"
+              <div
+                className=" group p-6 rounded-xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/20 transition"
               >
-                <FiTerminal className="text-cyan-400 mb-4 text-xl" />
+                <FiTerminal className="text-cyan-400 mb-4 text-xl group-hover:translate-x-2 group-hover:text-white duration-500 transition-all " />
                 <h4 className="text-white font-bold mb-2">Frontend</h4>
                 <p className="text-sm text-gray-500">
                   React, Next.js, Tailwind, DaisyUI, HeroUI
                 </p>
-              </motion.div>
+              </div>
 
-              <motion.div
-                variants={stagger}
-                whileHover={{ scale: 1.03 }}
-                className="p-6 rounded-xl bg-white/[0.02] border border-white/5 hover:border-purple-500/20 transition"
+              <div
+                className="group p-6 rounded-xl bg-white/[0.02] border border-white/5 hover:border-purple-500/20 transition"
               >
-                <FiDatabase className="text-purple-500 mb-4 text-xl" />
+                <FiDatabase className="text-purple-500 mb-4 text-xl group-hover:-translate-y-2 group-hover:text-white duration-500 transition-all" />
                 <h4 className="text-white font-bold mb-2">Backend</h4>
                 <p className="text-sm text-gray-500">
                   Node.js, Express, MongoDB, Firebase
                 </p>
-              </motion.div>
-            </motion.div>
-          </motion.div>
+              </div>
+            </div>
+          </div>
 
 
 
@@ -138,9 +122,9 @@ const AboutSection = () => {
             viewport={{ once: false, amount: 0.2 }}
             className="lg:col-span-5 sticky top-32"
           >
-            <div className="relative p-1 rounded-[2.5rem] bg-linear-to-br from-cyan-500/20 via-transparent to-transparent">
+            <div className="relative p-1 rounded-2xl bg-linear-to-br from-cyan-500/20 via-transparent to-transparent">
 
-              <div className="bg-[#0a0a0a] rounded-[2.4rem] p-10 space-y-10">
+              <div className="bg-[#0a0a0a]/30 rounded-2xl p-8 space-y-10">
 
                 {/* Location */}
                 <motion.div whileHover={{ x: 5 }} className="flex items-start gap-5">
@@ -161,9 +145,12 @@ const AboutSection = () => {
                       Education
                     </p>
                     <p className="text-gray-200">
-                      CSE Student <br />
-                      <span className="text-sm text-gray-500">
-                        Diploma Engineering
+                      Computer Science & Technology <br />
+                      {/* <span className="text-sm text-gray-500">
+                        Diploma in Engineering
+                      </span> */}
+                      <span className="text-sm text-gray-500"> 
+                        Square Polytechnic Institute, Bogura.
                       </span>
                     </p>
                   </div>

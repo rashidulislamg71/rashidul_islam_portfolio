@@ -48,14 +48,7 @@ const ProjectsSection = () => {
       <div className="container relative z-10">
 
         {/* HEADER */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.3 }}
-          transition={{ duration: 0.7 }}
-          className="mb-20"
-        >
-          
+        <div>
           <SectionLabel>03 / Selected Work</SectionLabel>
 
           <h2 className="text-4xl md:text-6xl font-bold tracking-tighter">
@@ -66,25 +59,19 @@ const ProjectsSection = () => {
           <p className="text-gray-500 mt-4 max-w-xl">
             A collection of modern web applications built with focus on performance, UX and scalability.
           </p>
-        </motion.div>
+        </div>
 
         {/* GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:mt-15 mt-10 ">
 
           {projects.map((project, index) => (
-            <motion.div
+            <div
               key={index}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-              initial={{ opacity: 0, y: 60, scale: 0.98 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: false, amount: 0.2 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="relative p-8 rounded-[2rem] bg-white/5 border border-white/10 backdrop-blur-xl overflow-hidden group hover:border-cyan-400/30 transition-all duration-500"
+              className="relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl overflow-hidden group hover:border-cyan-400/50 transition-all duration-500"
             >
 
               {/* hover glow */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-br from-cyan-500/10 via-transparent to-transparent transition-all duration-500" />
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-linear-to-br from-cyan-500/20 via-transparent to-transparent transition-all duration-500" />
 
               <div className="relative z-10 flex flex-col h-full">
 
@@ -150,7 +137,7 @@ const ProjectsSection = () => {
 
               {/* floating glow */}
               <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-cyan-500/10 blur-[90px] rounded-full opacity-0 group-hover:opacity-100 transition duration-700" />
-            </motion.div>
+            </div>
           ))}
         </div>
 

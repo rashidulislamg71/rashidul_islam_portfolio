@@ -44,7 +44,7 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-50 ">
       <div className="">
-        <div className="px-5 md:px-16 navbar bg-[#020617]/20 backdrop-blur-xl ">
+        <div className=" navbar backdrop-blur-xl md:px-10 lg:px-16 max-w-7xl mx-auto ">
 
           {/* Left */}
           <div className="navbar-start">
@@ -80,7 +80,7 @@ const Navbar = () => {
             </div>
 
             {/* Logo */}
-            <a href="#home" className="flex items-center">
+            <a href="#home" className="flex items-center -ml-5">
               <Image
                 src="/logo.png"
                 alt="Logo"
