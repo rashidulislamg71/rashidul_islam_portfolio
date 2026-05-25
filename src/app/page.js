@@ -1,6 +1,6 @@
 import About from "@/components/About";
 import GalaxyBackground from "@/components/BackgroundEffects ";
-import Contact from "@/components/Contact";
+// import Contact from "@/components/Contact";
 import Timeline from "@/components/Edu_Exp";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
@@ -15,7 +15,7 @@ function HomePage() {
       <Skills />
       <Projects />
       <Timeline />
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
       <GalaxyBackground />
     </div>

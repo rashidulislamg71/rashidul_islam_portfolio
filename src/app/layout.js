@@ -1,6 +1,9 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "./globals.css";
+import "aos/dist/aos.css";
 import Navbar from "../components/Navbar";
+import AosProvider from "@/components/AosProvider/AosProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -104,7 +107,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en">
       <body
         className={`
           ${geistSans.variable} 
@@ -115,7 +118,9 @@ export default function RootLayout({ children }) {
         `}
       >
         <Navbar />
+        <AosProvider >
         {children}
+        </AosProvider>
       </body>
     </html>
   );

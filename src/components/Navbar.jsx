@@ -10,7 +10,7 @@ const navLinks = [
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
   { name: "Experience", href: "#experience" },
-  { name: "Contact", href: "#contact" },
+  { name: "Contact", href: "#footer" },
 ];
 
 const Navbar = () => {
@@ -125,7 +125,7 @@ const Navbar = () => {
           {/* Right */}
           <div className="navbar-end">
             <a
-              href="#contact"
+              href="#footer"
               className="btn rounded-sm bg-white text-black border hover:border-white hover:bg-white/0 hover:text-white transition-all duration-300"
             >
               Hire Me

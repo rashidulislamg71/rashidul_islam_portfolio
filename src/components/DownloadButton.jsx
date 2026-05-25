@@ -1,58 +1,17 @@
-// import { FiDownload } from "react-icons/fi";
-
-// const DownloadButton = ({ children = "Download Resume", href = "/resume.pdf" }) => {
-//   return (
-//     <a
-//       href={href}
-//       download
-//       className="
-//         group relative inline-flex items-center gap-3
-//         px-6 py-3 rounded-xl
-//         border border-white/20 text-white
-//         overflow-hidden
-//         transition-all duration-300
-//         hover:border-white hover:shadow-lg
-//       "
-//     >
-//       {/* Background Fill */}
-//       <span className="
-//         absolute inset-0 bg-white
-//         translate-y-full group-hover:translate-y-0
-//         transition-transform duration-300
-//       "></span>
-
-//       {/* Icon */}
-//       <span className="
-//         relative z-10
-//         group-hover:animate-bounce
-//         transition-colors duration-300
-//       ">
-//         <FiDownload size={20} />
-//       </span>
-
-//       {/* Text */}
-//       <span className="
-//         relative z-10 font-medium
-//         group-hover:text-black
-//         transition-colors duration-300
-//       ">
-//         {children}
-//       </span>
-//     </a>
-//   );
-// };
-
-// export default DownloadButton;
-
-
-
+import Link from "next/link";
 import { FiDownload } from "react-icons/fi";
 
-const DownloadButton = ({ children = "Download Resume", href = "/resume.pdf" }) => {
+
+const DownloadButton = ({
+  children = "Download Resume",
+}) => {
   return (
     <div className="flex justify-center items-center ">
-      <a
-        href={href}
+      <Link
+       target="_blank"
+        href={
+          "https://drive.google.com/file/d/1KltpUxQgABp4FGTWXnN3t5iGJ3F8JPBr/view?usp=drive_link"
+        }
         download
         className="
           group relative inline-flex items-center justify-center 
@@ -82,7 +41,7 @@ const DownloadButton = ({ children = "Download Resume", href = "/resume.pdf" }) 
 
         {/* 3. Subtle Inner Glow (Optional) */}
         <span className="absolute inset-0 rounded-full bg-blue-500/4 group-hover:bg-blue-500/10 transition-colors"></span>
-      </a>
+      </Link>
     </div>
   );
 };

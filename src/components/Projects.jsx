@@ -1,146 +1,166 @@
 "use client";
 
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 import { FiArrowUpRight, FiGithub, FiLayers } from "react-icons/fi";
 import SectionLabel from "./SectionLabel";
+import Link from "next/link";
+import Image from "next/image";
 
 const ProjectsSection = () => {
-  const [hoveredIndex, setHoveredIndex] = useState(null);
-
   const projects = [
     {
-      title: "BookShelf Pro",
+      title: "BookShelf",
       category: "Full Stack",
       desc: "A high-performance library management engine with real-time availability tracking.",
-      tech: ["Next.js", "MongoDB", "Better Auth"],
-      link: "#",
+      tech: ["TailwindCSS", "Next.js", "MongoDB", "Better Auth"],
+      image: "/bookShelf_project_img.png",
+      liveLink: "https://bookshelf-seven-pearl.vercel.app",
+      github: "https://github.com/rashidulislamg71/BookShelf",
     },
     {
       title: "JobTracker AI",
       category: "SaaS",
       desc: "AI-powered career tracker with analytics and smart workflow automation.",
       tech: ["React", "Node.js", "Tailwind"],
-      link: "#",
+      image: "/jobtracker.png",
+      liveLink: "https://bookshelf-seven-pearl.vercel.app",
+      github: "https://github.com/rashidulislamg71/BookShelf",
     },
     {
       title: "Square Polytechnic",
       category: "Web App",
       desc: "Institutional platform optimized for student management system.",
       tech: ["Next.js", "Firebase", "HeroUI"],
-      link: "#",
-    },
-    {
-      title: "Visionary Gallery",
-      category: "AI UI",
-      desc: "Modern AI image interaction platform with immersive UI experience.",
-      tech: ["React", "Framer Motion", "Tailwind"],
-      link: "#",
+      image: "/square_polytechnic.png",
+      liveLink: "https://bookshelf-seven-pearl.vercel.app",
+      github: "https://github.com/rashidulislamg71/BookShelf",
     },
   ];
 
   return (
     <section
       id="projects"
-      className="relative py-20 text-white overflow-hidden "
+      className="relative overflow-hidden py-16 text-white"
     >
-      
-      <div className="container relative z-10">
-
+      <div className="container mx-auto px-4 relative z-10">
         {/* HEADER */}
-        <div>
+        <div data-aos="fade-up" data-aos-anchor-placement="center-bottom">
           <SectionLabel>03 / Selected Work</SectionLabel>
 
-          <h2 className="text-4xl md:text-6xl font-bold tracking-tighter">
+          <h2 className="autoShow text-3xl md:text-4xl font-bold tracking-tighter">
             Featured{" "}
             <span className="text-gray-500 italic font-light">Projects</span>
           </h2>
 
-          <p className="text-gray-500 mt-4 max-w-xl">
-            A collection of modern web applications built with focus on performance, UX and scalability.
+          <p className="autoShow text-gray-400 mt-4 max-w-2xl leading-relaxed">
+            A collection of modern web applications built with performance,
+            scalability, and immersive user experience.
           </p>
         </div>
 
-        {/* GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:mt-15 mt-10 ">
-
+        {/* GRID WITH FRAMER MOTION POP */}
+        <div
+          data-aos="fade-up"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12"
+        >
           {projects.map((project, index) => (
             <div
+              data-aos="zoom-in"
+              data-aos-delay={index * 100}
               key={index}
-              className="relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl overflow-hidden group hover:border-cyan-400/50 transition-all duration-500"
+              className="relative rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden group hover:border-cyan-400/40 transition-all duration-500"
             >
+              {/* TOP GLOW FIX */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-liner-to-br from-cyan-500 via-transparent to-transparent transition duration-700" />
+              {/* Hover Glow */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-linear-to-br from-cyan-500/20 via-transparent to-transparent transition-all duration-500 " />
 
-              {/* hover glow */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-linear-to-br from-cyan-500/20 via-transparent to-transparent transition-all duration-500" />
-
-              <div className="relative z-10 flex flex-col h-full">
-
-                {/* top icons */}
-                <div className="flex justify-between items-center mb-10">
-                  <div className="p-3 rounded-2xl bg-white/5 text-cyan-400">
-                    <FiLayers />
-                  </div>
-
-                  {/* ACTIONS */}
-                  <div className="flex items-center gap-5 text-sm">
-
-                    {/* LIVE */}
-                    <a
-                      href={project.link}
-                      className="flex items-center gap-2 text-gray-400 hover:text-cyan-400 transition group"
-                    >
-                      <FiArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition" />
-                      <span className="uppercase tracking-widest text-[11px]">
-                        Live
-                      </span>
-                    </a>
-
-                    {/* GITHUB */}
-                    <a
-                      href={project.github || "#"}
-                      className="flex items-center gap-2 text-gray-400 hover:text-white transition group"
-                    >
-                      <FiGithub className="group-hover:scale-110 transition" />
-                      <span className="uppercase tracking-widest text-[11px]">
-                        Github
-                      </span>
-                    </a>
-
-                  </div>
+              <div className="" data-aos="zoom-in" data-aos-delay={index * 100}>
+                <div
+                  className="opacity-30 absolute top-30 
+                right-0 -z-10 "
+                >
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    height={300}
+                    width={300}
+                  />
                 </div>
 
-                {/* text */}
-                <p className="text-xs tracking-[0.3em] text-cyan-400 uppercase mb-2">
-                  {project.category}
-                </p>
+                <div className="relative col-span-8 z-10 p-5 md:p-6 flex flex-col h-full">
+                  {/* TOP AREA */}
+                  <div className="flex items-center justify-between mb-8">
+                    {/* ICON - DaisyUI Alert style fallback badge */}
+                    <div className="p-3 rounded-2xl bg-white/5 text-cyan-400 border border-white/10">
+                      <FiLayers size={18} />
+                    </div>
 
-                <h3 className="text-3xl font-semibold mb-4 group-hover:text-cyan-300 transition">
-                  {project.title}
-                </h3>
+                    {/* ACTION BUTTONS */}
+                    <div className="flex items-center gap-3">
+                      {/* LIVE BUTTON */}
+                      {project.liveLink && project.liveLink !== "#" && (
+                        <Link
+                          href={project.liveLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn btn-xs sm:btn-sm rounded-full bg-cyan-500/10 border border-cyan-400/20 hover:bg-cyan-400 hover:text-black transition-all duration-300 uppercase tracking-widest text-cyan-400 font-normal normal-case"
+                        >
+                          <FiArrowUpRight />
+                          Live
+                        </Link>
+                      )}
 
-                <p className="text-gray-400 text-sm leading-relaxed mb-8">
-                  {project.desc}
-                </p>
+                      {/* GITHUB BUTTON */}
+                      {project.github && project.github !== "#" && (
+                        <Link
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 text-gray-400 hover:text-cyan-300 transition-all duration-300 text-xs uppercase tracking-widest"
+                        >
+                          <FiGithub className="group-hover:scale-110 transition" />
+                          Github
+                        </Link>
+                      )}
+                    </div>
+                  </div>
 
-                {/* tech */}
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  {project.tech.map((t) => (
-                    <span
-                      key={t}
-                      className="text-[10px] px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-400"
-                    >
-                      {t}
-                    </span>
-                  ))}
+                  {/* CATEGORY */}
+                  <p className="text-xs tracking-[0.3em] text-cyan-400 uppercase mb-3">
+                    {project.category}
+                  </p>
+
+                  {/* TITLE */}
+                  <h3 className="text-2xl md:text-3xl font-semibold mb-4 group-hover:text-cyan-300 transition duration-300">
+                    {project.title}
+                  </h3>
+
+                  {/* DESCRIPTION */}
+                  <p className="text-gray-400 text-sm leading-relaxed mb-8">
+                    {project.desc}
+                  </p>
+
+                  {/* TECH STACK - DaisyUI Badges used smoothly */}
+                  <div className="flex flex-wrap gap-2 mt-auto">
+                    {project.tech.map((tech) => (
+                      <div
+                        key={tech}
+                        className="badge badge-outline border-cyan-400/20 text-cyan-200 text-[11px] py-3 px-3 bg-cyan-500/5"
+                      >
+                        {tech}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
 
-              {/* floating glow */}
+              {/* FLOATING GLOW */}
               <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-cyan-500/10 blur-[90px] rounded-full opacity-0 group-hover:opacity-100 transition duration-700" />
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

@@ -1,43 +1,14 @@
-/* app/globals.css
+
 @import "tailwindcss";
 @import "@heroui/styles";
 @plugin "daisyui";
+@import "aos/dist/aos.css";
 
 html {
   scroll-behavior: smooth;
-}
-
-body {
-  background: linear-gradient(
-    to bottom right,
-    #020617,
-    #0f172a,
-    #111827
-  );
-
-  color: white;
-  min-height: 100vh;
-}
-
-.glass {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-} */
-
-
-/* app/globals.css */
-@import "tailwindcss";
-@import "@heroui/styles";
-@plugin "daisyui";
-
-html {
-  scroll-behavior: smooth;
-  /* Optional: Prevents layout shifts on scroll */
   scrollbar-gutter: stable;
 }
 
-/* Optional: Custom scrollbar to match your dark theme */
 ::-webkit-scrollbar {
   width: 5px;
 }
