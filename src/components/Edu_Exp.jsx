@@ -109,7 +109,7 @@ const HistorySection = () => {
   return (
     <section
       id="experience"
-      className="relative py-16 text-white overflow-hidden"
+      className="relative  py-16 md:py-20 mt-5 text-white overflow-hidden"
     >
       <div className="container relative z-10">
         <span data-aos="fade-up" data-aos-anchor-placement="center-bottom">

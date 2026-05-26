@@ -135,7 +135,7 @@ const ContactFooter = () => {
   ];
 
   return (
-    <section id="footer" className="relative py-16 overflow-hidden text-white">
+    <section id="footer" className="relative  py-16 md:py-20 mt-5 overflow-hidden text-white">
       {/* Background Blur */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-cyan-500/10 blur-[140px]" />
 

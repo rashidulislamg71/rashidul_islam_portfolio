@@ -69,7 +69,7 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section id="skills" className="relative py-16 text-white overflow-hidden">
+    <section id="skills" className="relative  py-16 md:py-20 mt-5 text-white overflow-hidden">
       <div className="container relative z-10">
         {/* Header */}
         <div

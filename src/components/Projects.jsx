@@ -11,28 +11,36 @@ import { ProjectModal } from "./ProjectModal";
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "BookShelf",
+      title: "BookShelf- Book Borrowing Platform",
       category: "Frontend",
-      desc: "A high-performance library management engine with real-time availability tracking.A high-performance library management engine with real-time availability tracking.A high-performance library management engine with real-time availability tracking.A high-performance library management engine with real-time availability tracking.",
+      desc: "Frontend-focused responsive book borrowing platform with secure authentication. Implemented search & filter, private routes, user profile, and borrowing system.",
       tech: ["Next.js", "TailwindCSS", "BetterAuth", "Google Authentication"],
       image: "/bookShelf_project_img.png",
       liveLink: "https://bookshelf-seven-pearl.vercel.app",
       github: "https://github.com/rashidulislamg71/BookShelf",
     },
+
     {
-      title: "JobTracker AI",
-      category: "SaaS",
-      desc: "AI-powered career tracker with analytics and smart workflow automation.",
-      tech: ["React", "Node.js", "Tailwind"],
+      title: "SmartCare+ Dr. Appointment Management",
+      category: "Full Stack",
+      desc: "Backend-focused full-stack doctor appointment system with secure authentication. Implemented CRUD operations, search, booking, and user dashboard. Integrated JWT authentication, Google login, and protected routes. Built a REST API with a responsive and seamless user experience.",
+      tech: [
+        "Next.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Tailwind",
+        "Authentication",
+      ],
       image: "/jobtracker.png",
-      liveLink: "https://bookshelf-seven-pearl.vercel.app",
-      github: "https://github.com/rashidulislamg71/BookShelf",
+      liveLink: "https://smart-care-plus.vercel.app",
+      github: "https://github.com/rashidul-islam-7/smart-care-",
     },
     {
-      title: "Square Polytechnic",
-      category: "Web App",
+      title: "Square Polytechnic - Official Website ",
+      category: "Frontend",
       desc: "Institutional platform optimized for student management system.",
-      tech: ["Next.js", "Firebase", "HeroUI"],
+      tech: ["React.js", "TailwindCSS"],
       image: "/square_polytechnic.png",
       liveLink: "https://bookshelf-seven-pearl.vercel.app",
       github: "https://github.com/rashidulislamg71/BookShelf",
@@ -42,7 +50,7 @@ const ProjectsSection = () => {
   return (
     <section
       id="projects"
-      className="relative overflow-hidden py-16 text-white"
+      className="relative overflow-hidden mt-5 py-16 md:py-20 text-white"
     >
       <div className="container mx-auto px-4 relative z-10">
         {/* HEADER */}
@@ -79,7 +87,7 @@ const ProjectsSection = () => {
 
               <div className="" data-aos="zoom-in" data-aos-delay={index * 100}>
                 <div
-                  className="opacity-30 absolute top-10 
+                  className="opacity-30 absolute bottom-0 
                 right-0 -z-10 "
                 >
                   <Image
@@ -134,7 +142,7 @@ const ProjectsSection = () => {
                   </p>
 
                   {/* TITLE */}
-                  <h3 className="text-2xl md:text-3xl font-semibold mb-2 group-hover:text-cyan-300 transition duration-300">
+                  <h3 className="text-2xl  font-semibold mb-2 group-hover:text-cyan-300 transition duration-300">
                     {project.title}
                   </h3>
 

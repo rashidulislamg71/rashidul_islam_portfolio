@@ -32,9 +32,9 @@ const stagger = {
 
 const AboutSection = () => {
   return (
-    <section id="about" className="relative py-16 text-white overflow-hidden ">
+    <section id="about" className="relative py-16 md:py-20 mt-5 text-white overflow-hidden ">
       <div className="container relative z-10">
-        {/* SECTION LABEL */}
+        {/* SECTION LABEL */} 
         <div>
           <SectionLabel>01 / About Me</SectionLabel>
         </div>
