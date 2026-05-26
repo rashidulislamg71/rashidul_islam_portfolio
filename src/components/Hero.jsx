@@ -1,11 +1,11 @@
 "use client";
 
-import { FiArrowUpRight, FiGithub } from "react-icons/fi";
+import { FiArrowDown, FiArrowUpRight, FiGithub } from "react-icons/fi";
 
 import { SiNextdotjs, SiReact, SiTailwindcss, SiMongodb } from "react-icons/si";
 
 import Image from "next/image";
-import { FaFacebookSquare, FaLinkedinIn } from "react-icons/fa";
+import { FaArrowDown, FaFacebookSquare, FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
 import PulseBadge from "./PulseBadge";
 import DownloadButton from "./DownloadButton";
@@ -159,6 +159,9 @@ export default function Hero() {
               alt="Rashidul Islam"
               className="animate-pulse h-[260px] w-[270px] rounded-2xl transition-all duration-500 hover:scale-105 border-[10px] border-blue-300/10"
             />
+            <div>
+              <span><FiArrowDown /></span>
+            </div>
           </div>
         </div>
       </div>

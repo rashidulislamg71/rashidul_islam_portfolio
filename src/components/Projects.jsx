@@ -6,14 +6,15 @@ import { FiArrowUpRight, FiGithub, FiLayers } from "react-icons/fi";
 import SectionLabel from "./SectionLabel";
 import Link from "next/link";
 import Image from "next/image";
+import { ProjectModal } from "./ProjectModal";
 
 const ProjectsSection = () => {
   const projects = [
     {
       title: "BookShelf",
-      category: "Full Stack",
-      desc: "A high-performance library management engine with real-time availability tracking.",
-      tech: ["TailwindCSS", "Next.js", "MongoDB", "Better Auth"],
+      category: "Frontend",
+      desc: "A high-performance library management engine with real-time availability tracking.A high-performance library management engine with real-time availability tracking.A high-performance library management engine with real-time availability tracking.A high-performance library management engine with real-time availability tracking.",
+      tech: ["Next.js", "TailwindCSS", "BetterAuth", "Google Authentication"],
       image: "/bookShelf_project_img.png",
       liveLink: "https://bookshelf-seven-pearl.vercel.app",
       github: "https://github.com/rashidulislamg71/BookShelf",
@@ -78,14 +79,14 @@ const ProjectsSection = () => {
 
               <div className="" data-aos="zoom-in" data-aos-delay={index * 100}>
                 <div
-                  className="opacity-30 absolute top-30 
+                  className="opacity-30 absolute top-10 
                 right-0 -z-10 "
                 >
                   <Image
                     src={project.image}
                     alt={project.title}
-                    height={300}
-                    width={300}
+                    height={400}
+                    width={400}
                   />
                 </div>
 
@@ -128,17 +129,17 @@ const ProjectsSection = () => {
                   </div>
 
                   {/* CATEGORY */}
-                  <p className="text-xs tracking-[0.3em] text-cyan-400 uppercase mb-3">
+                  <p className="text-xs tracking-[0.3em] text-cyan-400 uppercase mb-2">
                     {project.category}
                   </p>
 
                   {/* TITLE */}
-                  <h3 className="text-2xl md:text-3xl font-semibold mb-4 group-hover:text-cyan-300 transition duration-300">
+                  <h3 className="text-2xl md:text-3xl font-semibold mb-2 group-hover:text-cyan-300 transition duration-300">
                     {project.title}
                   </h3>
 
                   {/* DESCRIPTION */}
-                  <p className="text-gray-400 text-sm leading-relaxed mb-8">
+                  <p className="text-gray-300 text-sm leading-relaxed mb-6 line-clamp-4">
                     {project.desc}
                   </p>
 
@@ -147,7 +148,7 @@ const ProjectsSection = () => {
                     {project.tech.map((tech) => (
                       <div
                         key={tech}
-                        className="badge badge-outline border-cyan-400/20 text-cyan-200 text-[11px] py-3 px-3 bg-cyan-500/5"
+                        className="badge badge-outline border-cyan-400/20 text-cyan-50 text-[11px] py-3 px-3 bg-cyan-500/5"
                       >
                         {tech}
                       </div>
