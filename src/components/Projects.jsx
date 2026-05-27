@@ -2,7 +2,13 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { FiArrowUpRight, FiGithub, FiLayers } from "react-icons/fi";
+import {
+  FiArrowDown,
+  FiArrowRight,
+  FiArrowUpRight,
+  FiGithub,
+  FiLayers,
+} from "react-icons/fi";
 import SectionLabel from "./SectionLabel";
 import Link from "next/link";
 import Image from "next/image";
@@ -50,7 +56,7 @@ const ProjectsSection = () => {
   return (
     <section
       id="projects"
-      className="relative overflow-hidden mt-5 py-16 md:py-20 text-white"
+      className="relative overflow-hidden mt-5  pt-16 md:pt-20 text-white"
     >
       <div className="container mx-auto px-4 relative z-10">
         {/* HEADER */}
@@ -169,6 +175,36 @@ const ProjectsSection = () => {
               <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-cyan-500/10 blur-[90px] rounded-full opacity-0 group-hover:opacity-100 transition duration-700" />
             </div>
           ))}
+        </div>
+
+        {/* SEE MORE BUTTON */}
+        <div className="flex justify-center md:justify-end mt-14">
+          <button
+            className="
+      group relative overflow-hidden
+      flex items-center gap-3
+      px-6 py-3
+      rounded-xl
+      border border-cyan-400/20
+      bg-white/5 backdrop-blur-xl
+      text-cyan-300
+      font-medium tracking-wide
+      shadow-lg shadow-cyan-500/10
+      transition-all duration-500
+      hover:border-cyan-400/50
+      hover:bg-cyan-400
+      hover:text-black
+      cursor-pointer
+    "
+          >
+            {/* Text */}
+            <span className="relative z-10">Explore More Projects</span>
+
+            {/* Icon */}
+            <span className="relative z-10 transition-transform duration-300 group-hover:translate-x-1">
+              <FiArrowRight size={18} />
+            </span>
+          </button>
         </div>
       </div>
     </section>

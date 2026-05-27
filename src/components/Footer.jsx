@@ -146,7 +146,7 @@ const ContactFooter = () => {
           data-aos-anchor-placement="center-bottom"
           className="max-w-4xl"
         >
-          <SectionLabel>Contact</SectionLabel>
+          <SectionLabel> 05 / Contact</SectionLabel>
 
           <h2 className="text-3xl md:text-4xl font-black leading-tight">
             Let’s Build Something

@@ -27,7 +27,10 @@ const Navbar = () => {
 
         const rect = section.getBoundingClientRect();
 
-        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+        if (
+          rect.top <= window.innerHeight / 2 &&
+          rect.bottom >= window.innerHeight / 2
+        ) {
           current = section.id;
         }
       });
@@ -45,10 +48,8 @@ const Navbar = () => {
     <header className="fixed top-0 left-0 w-full z-50 ">
       <div className="">
         <div className=" navbar backdrop-blur-xl md:px-10 lg:px-16 max-w-7xl mx-auto ">
-
           {/* Left */}
           <div className="navbar-start">
-
             {/* Mobile Menu */}
             <div className="dropdown lg:hidden">
               <div
@@ -67,10 +68,11 @@ const Navbar = () => {
                   <li key={link.name}>
                     <a
                       href={link.href}
-                      className={`rounded-xl transition-all duration-300 ${activeSection === link.href.replace("#", "")
-                        ? "bg-white text-black"
-                        : "text-white hover:bg-white/10"
-                        }`}
+                      className={`rounded-xl transition-all duration-300 ${
+                        activeSection === link.href.replace("#", "")
+                          ? "bg-white text-black"
+                          : "text-white hover:bg-white/10"
+                      }`}
                     >
                       {link.name}
                     </a>
@@ -98,27 +100,27 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal gap-2 px-1 flex gap-8 text-white font-medium">
-
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className={`relative text-md px-1 transition-all duration-200 ${activeSection === link.href.replace("#", "")
-                    ? "text-white"
-                    : "text-gray-400 hover:text-white"
-                    }`}
+                  className={`relative text-md px-1 transition-all duration-200 ${
+                    activeSection === link.href.replace("#", "")
+                      ? "text-white"
+                      : "text-gray-400 hover:text-white"
+                  }`}
                 >
                   {link.name}
 
                   <span
-                    className={`absolute left-0 -bottom-1 h-0.5 bg-white/30 transition-all duration-200 ${activeSection === link.href.replace("#", "")
-                      ? "w-full"
-                      : "w-0"
-                      }`}
+                    className={`absolute left-0 -bottom-1 h-0.5 bg-white/30 transition-all duration-200 ${
+                      activeSection === link.href.replace("#", "")
+                        ? "w-full"
+                        : "w-0"
+                    }`}
                   ></span>
                 </a>
               ))}
-
             </ul>
           </div>
 

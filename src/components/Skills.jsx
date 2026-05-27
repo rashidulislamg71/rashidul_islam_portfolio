@@ -19,7 +19,6 @@ import {
 } from "react-icons/si";
 
 import { VscVscode } from "react-icons/vsc";
-import { motion } from "framer-motion";
 import SectionLabel from "./SectionLabel";
 import PulseBadge from "./PulseBadge";
 import { FiDatabase, FiTerminal, FiTool } from "react-icons/fi";
@@ -32,14 +31,14 @@ const SkillsSection = () => {
       desc: "Modern UI & responsive design",
       items: [
         { name: "Next.js", icon: <SiNextdotjs />, color: "text-white" },
-        { name: "React", icon: <SiReact />, color: "text-cyan-400" },
-        { name: "Tailwind", icon: <SiTailwindcss />, color: "text-sky-400" },
+        { name: "React.js", icon: <SiReact />, color: "text-cyan-400" },
+        { name: "TailwindCSS", icon: <SiTailwindcss />, color: "text-sky-400" },
         {
           name: "JavaScript",
           icon: <SiJavascript />,
           color: "text-yellow-400",
         },
-        { name: "Python(Basic)", icon: <SiPython />, color: "text-yellow-400" },
+        { name: "Python (Basic)", icon: <SiPython />, color: "text-yellow-400" },
       ],
     },
     {

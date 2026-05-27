@@ -78,7 +78,7 @@ const HistorySection = () => {
     {
       degree: "Web Development Training",
       institution: "As-Sunnah Skill Development Institute & Programming Hero",
-      duration: "7 months (Frontend) • 6 months (Full Stack Learning)",
+      duration: "7 mon (Frontend) • 6 mon (Full Stack Learning)",
       location: "Bangladesh",
       description:
         "Completed frontend development training at As-Sunnah Skill Development Institute and full-stack development training at Programming Hero. Currently focusing on advanced frontend and backend development while building frontend-heavy real-world projects.",
