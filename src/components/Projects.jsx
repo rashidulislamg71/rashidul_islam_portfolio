@@ -42,14 +42,25 @@ const ProjectsSection = () => {
       liveLink: "https://smart-care-plus.vercel.app",
       github: "https://github.com/rashidul-islam-7/smart-care-",
     },
+
     {
-      title: "Square Polytechnic - Official Website ",
+      title: "Trust-Farms - Organic Food E-Commerce Website",
       category: "Frontend",
-      desc: "Institutional platform optimized for student management system.",
-      tech: ["React.js", "TailwindCSS"],
-      image: "/square_polytechnic.png",
-      liveLink: "https://bookshelf-seven-pearl.vercel.app",
-      github: "https://github.com/rashidulislamg71/BookShelf",
+      desc: "A modern organic food e-commerce platform for fruits and vegetables with category filtering, authentication, and dynamic cart system. Users can increase or decrease quantity, and price is calculated automatically based on kg and item count. Built with React.js and CSS3 for a smooth UI/UX experience.",
+      tech: ["React.js", "CSS3", "Firebase Authentication"],
+      image: "",
+      liveLink: "https://trust-farms.vercel.app",
+      github: "https://github.com/rashidul-islam-7/trust-farms",
+    },
+
+    {
+      title: "Get.car - Demo Car Selling Website",
+      category: "Frontend",
+      desc: "A responsive car e-commerce platform with authentication, modern UI/UX, product filtering, and add-to-cart functionality for a seamless user experience.",
+      tech: ["React.js", "CSS3", "Firebase Authentication"],
+      image: "",
+      liveLink: "https://getcar-mu.vercel.app",
+      github: "https://github.com/rashidul-islam-7/get.car/tree/main",
     },
   ];
 
@@ -92,7 +103,7 @@ const ProjectsSection = () => {
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-linear-to-br from-cyan-500/20 via-transparent to-transparent transition-all duration-500 " />
 
               <div className="" data-aos="zoom-in" data-aos-delay={index * 100}>
-                <div
+                {/* <div
                   className="opacity-30 absolute bottom-0 
                 right-0 -z-10 "
                 >
@@ -102,7 +113,7 @@ const ProjectsSection = () => {
                     height={400}
                     width={400}
                   />
-                </div>
+                </div> */}
 
                 <div className="relative col-span-8 z-10 p-5 md:p-6 flex flex-col h-full">
                   {/* TOP AREA */}
@@ -179,8 +190,9 @@ const ProjectsSection = () => {
 
         {/* SEE MORE BUTTON */}
         <div className="flex justify-center md:justify-end mt-14">
-          <button
-            className="
+          <a target="_blank" href="https://github.com/rashidul-islam-7">
+            <button
+              className="
       group relative overflow-hidden
       flex items-center gap-3
       px-6 py-3
@@ -196,15 +208,16 @@ const ProjectsSection = () => {
       hover:text-black
       cursor-pointer
     "
-          >
-            {/* Text */}
-            <span className="relative z-10">Explore More Projects</span>
+            >
+              {/* Text */}
+              <span className="relative z-10">Explore More Projects</span>
 
-            {/* Icon */}
-            <span className="relative z-10 transition-transform duration-300 group-hover:translate-x-1">
-              <FiArrowRight size={18} />
-            </span>
-          </button>
+              {/* Icon */}
+              <span className="relative z-10 transition-transform duration-300 group-hover:translate-x-1">
+                <FiArrowRight size={18} />
+              </span>
+            </button>
+          </a>
         </div>
       </div>
     </section>

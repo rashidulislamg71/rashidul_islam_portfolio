@@ -160,7 +160,7 @@ export default function Hero() {
               className="animate-pulse h-[260px] w-[270px] rounded-2xl transition-all duration-500 hover:scale-105 border-[10px] border-blue-300/10"
             />
             <div>
-              <span><FiArrowDown /></span>
+              {/* <span><FiArrowDown /></span> */}
             </div>
           </div>
         </div>
