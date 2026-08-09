@@ -33,7 +33,7 @@ const projectsData = [
       "TailwindCSS",
       "Framer Motion",
     ],
-    image: "/home_page.png",
+    image: "/chefWorld.png",
     liveLink: "https://chef-world.vercel.app",
     clientGithub: "https://github.com/rashidul-islam-7/chef-world",
     serverGithub: "https://github.com/rashidul-islam-7/chef-world-server",
@@ -64,7 +64,7 @@ const projectsData = [
     category: "Full Stack",
     desc: "Backend-focused full-stack doctor appointment system with secure authentication. Implemented CRUD operations, booking, and user dashboard with REST API.",
     tech: ["Next.js", "Node.js", "Express.js", "MongoDB", "Tailwind"],
-    image: "/jobtracker.png",
+    image: "/smartCare.png",
     liveLink: "https://smart-care-plus.vercel.app",
     clientGithub: "https://github.com/rashidul-islam-7/smart-care-",
     serverGithub: "", // ব্যাকএন্ড লিংক থাকলে এখানে দিন
@@ -83,7 +83,7 @@ const projectsData = [
     category: "Frontend",
     desc: "Frontend-focused responsive book borrowing platform with secure authentication. Implemented search & filter, private routes, user profile, and borrowing system.",
     tech: ["Next.js", "TailwindCSS", "BetterAuth", "Google Auth"],
-    image: "/bookShelf_project_img.png",
+    image: "/book-borrowing.png",
     liveLink: "https://bookshelf-seven-pearl.vercel.app",
     clientGithub: "https://github.com/rashidulislamg71/BookShelf",
     details: {
@@ -101,7 +101,7 @@ const projectsData = [
     category: "Frontend",
     desc: "Organic food e-commerce platform with category filtering, authentication, dynamic cart system, and real-time quantity/price calculations.",
     tech: ["React.js", "CSS3", "Firebase Auth"],
-    image: "/trust_farms_img.png",
+    image: "/trust-farm.png",
     liveLink: "https://trust-farms.vercel.app",
     clientGithub: "https://github.com/rashidul-islam-7/trust-farms",
     details: {
@@ -114,23 +114,23 @@ const projectsData = [
       ],
     },
   },
-  {
-    title: "Get.car - Demo Car Selling Website",
-    category: "Frontend",
-    desc: "A responsive car e-commerce platform with authentication, modern UI/UX, product filtering, and add-to-cart functionality.",
-    tech: ["React.js", "CSS3", "Firebase Auth"],
-    image: "/getcar_img.png",
-    liveLink: "https://getcar-mu.vercel.app",
-    clientGithub: "https://github.com/rashidul-islam-7/get.car/tree/main",
-    details: {
-      overview:
-        "Car dealership demo application built with smooth UI transitions and product filtering.",
-      userFeatures: [
-        "Car filtering by category and specs",
-        "Add-to-cart & booking interaction",
-      ],
-    },
-  },
+  // {
+  //   title: "Get.car - Demo Car Selling Website",
+  //   category: "Frontend",
+  //   desc: "A responsive car e-commerce platform with authentication, modern UI/UX, product filtering, and add-to-cart functionality.",
+  //   tech: ["React.js", "CSS3", "Firebase Auth"],
+  //   image: "/getcar_img.png",
+  //   liveLink: "https://getcar-mu.vercel.app",
+  //   clientGithub: "https://github.com/rashidul-islam-7/get.car/tree/main",
+  //   details: {
+  //     overview:
+  //       "Car dealership demo application built with smooth UI transitions and product filtering.",
+  //     userFeatures: [
+  //       "Car filtering by category and specs",
+  //       "Add-to-cart & booking interaction",
+  //     ],
+  //   },
+  // },
 ];
 
 const ProjectsSection = () => {
@@ -213,7 +213,7 @@ const ProjectsSection = () => {
                     No Preview Available
                   </div>
                 )}
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/30 to-transparent opacity-90" />
+                <div className="absolute inset-0 bg-linear-to-t from-zinc-950 via-zinc-950/30 to-transparent opacity-90" />
               </div>
 
               {/* CARD CONTENT */}
@@ -225,7 +225,7 @@ const ProjectsSection = () => {
                   </span>
 
                   {/* ACTION LINKS */}
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 mt-6">
                     {/* LIVE LINK */}
                     {project.liveLink && (
                       <Link
