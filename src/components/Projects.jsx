@@ -67,7 +67,7 @@ const projectsData = [
     image: "/smartCare.png",
     liveLink: "https://smart-care-plus.vercel.app",
     clientGithub: "https://github.com/rashidul-islam-7/smart-care-",
-    serverGithub: "", // ব্যাকএন্ড লিংক থাকলে এখানে দিন
+    serverGithub: "https://github.com/rashidul-islam-7/smart-care-plus-server",
     details: {
       overview:
         "Full-stack medical booking system providing an intuitive dashboard for patients and doctors.",
