@@ -10,7 +10,7 @@ const DownloadButton = ({
       <Link
        target="_blank"
         href={
-          "https://drive.google.com/file/d/1ADhxmnuVJBZBT9qsXvpVba5e58DaU1Qg/view?usp=sharing"
+          "https://drive.google.com/file/d/1qT5TK4nPkVXg_QJkuBx6X54s5YfjVr7w/view?usp=sharing"
         }
         download
         className="
