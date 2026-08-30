@@ -305,7 +305,7 @@ const ProjectsSection = () => {
         {/* EXPLORE MORE BUTTON */}
         <div className="flex justify-center md:justify-end mt-14">
           <Link
-            href="https://github.com/rashidul-islam-7"
+            href="https://github.com/rashidul-islam-7?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative overflow-hidden flex items-center gap-3 px-6 py-3 rounded-xl border border-cyan-400/20 bg-white/5 backdrop-blur-xl text-cyan-300 font-medium tracking-wide shadow-lg shadow-cyan-500/10 transition-all duration-500 hover:border-cyan-400/50 hover:bg-cyan-400 hover:text-black"
